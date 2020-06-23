@@ -1,9 +1,13 @@
-import { RegistrationModule } from './registration/registration.module';
 import { HomeModule } from './home/home.module';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeRoutingModule } from './home/home-routing.module';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: HomeRoutingModule,
+  },
   {
     path: 'registration',
     loadChildren: () =>
@@ -14,7 +18,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [HomeModule, RegistrationModule, RouterModule.forRoot(routes)],
+  imports: [HomeModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
