@@ -1,27 +1,91 @@
-<form id="sign-up-container">
+<form id="sign-up-container" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
   <mat-form-field>
-    <mat-label i18n>Name</mat-label>
-    <input type="text" required matInput placeholder="Name" i18n-placeholder />
+    <mat-label i18n="Registration form, first name label">First name</mat-label>
+    <input
+      type="text"
+      required
+      matInput
+      placeholder="First name"
+      i18n-placeholder
+      formControlName="firstName"
+    />
+    <mat-error *ngIf="signUpForm.controls.firstName.errors?.required" i18n>
+      First name is required
+    </mat-error>
   </mat-form-field>
+
   <mat-form-field>
-    <mat-label i18n>Password</mat-label>
+    <mat-label i18n="Registration form, last name label">Last name</mat-label>
+    <input
+      type="text"
+      required
+      matInput
+      placeholder="Last name"
+      i18n-placeholder
+      formControlName="lastName"
+    />
+    <mat-error *ngIf="signUpForm.controls.lastName.errors?.required" i18n>
+      Last name is required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label i18n="Registration form, password label">Password</mat-label>
     <input
       type="password"
       required
       matInput
+      minlength="8"
       placeholder="Password"
       i18n-placeholder
+      formControlName="password"
+      [errorStateMatcher]="passwordErrorStateMatcher"
     />
+    <mat-error *ngIf="signUpForm.controls.password.errors?.required" i18n>
+      Password is required
+    </mat-error>
+    <mat-error *ngIf="signUpForm.controls.password.errors?.minlength" i18n>
+      Password should be at least 8 characters long
+    </mat-error>
+    <mat-error
+      *ngIf="signUpForm.controls.password.errors?.lowerAndUpperCharacters"
+      i18n
+    >
+      Password should contain lower and uppercase letters.
+    </mat-error>
+    <mat-error *ngIf="signUpForm.errors?.noNamesInPassword" i18n>
+      Password cannot contain your name.
+    </mat-error>
   </mat-form-field>
+
   <mat-form-field>
-    <mat-label i18n>Email</mat-label>
+    <mat-label i18n="Registration form, email label">Email</mat-label>
     <input
       type="email"
       required
       matInput
       placeholder="Email"
       i18n-placeholder
+      formControlName="email"
     />
+    <mat-error *ngIf="signUpForm.controls.email.errors?.required" i18n>
+      Email is required
+    </mat-error>
+    <mat-error *ngIf="signUpForm.controls.email.errors?.email" i18n>
+      Email format is incorrect
+    </mat-error>
   </mat-form-field>
-  <button mat-raised-button color="primary" i18n>Submit</button>
+
+  <br />
+  <br />
+
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="!signUpForm.valid"
+    i18n
+  >
+    Submit
+  </button>
 </form>
