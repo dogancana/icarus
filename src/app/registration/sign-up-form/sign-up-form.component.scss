@@ -1,0 +1,17 @@
+@import "../../variables.scss";
+
+:host {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sign-up-container {
+  width: 400px;
+  min-height: 100px;
+  box-shadow: 1px 3px 5px mat-color($primaryPalette);
+  display: flex;
+  flex-direction: column;
+  padding: $spacing * 2;
+}

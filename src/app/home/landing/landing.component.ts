@@ -18,7 +18,7 @@ export class LandingComponent implements OnInit, OnDestroy {
       this.timeToRedirect * 1000
     );
     this.timerIntervalID = this.window.setInterval(
-      () => this.timeToRedirect--,
+      () => (this.timeToRedirect = Math.max(this.timeToRedirect - 1, 0)),
       1000
     );
   }
