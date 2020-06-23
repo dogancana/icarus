@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="7bcd15219749ea92b9435ea8b7369dee1aa72a8a" datatype="html">
+        <source>App title</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a558196afdc104da8c017131f9c8f54a0314d0d2" datatype="html">
+        <source>
+      You are not logged. You&apos;ll be redirected to login/registration flow in
+      <x id="INTERPOLATION" equiv-text="{{ timeToRedirect }}"/>
+      <x id="ICU" equiv-text="{ timeToRedirect, plural, many {...} =1 {...}}"/>
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Not logged in text</note>
+      </trans-unit>
+      <trans-unit id="9013b3624614b7ef90b12d11da88e3700c730542" datatype="html">
+        <source>{VAR_PLURAL, plural, many {seconds} =1 {second} }</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="62b6c66981335ca6eecc36b331103c60f09d1026" datatype="html">
+        <source>First name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Registration form, first name label</note>
+      </trans-unit>
+      <trans-unit id="92a89ad4c10e0c47a5c993d115f7a8cb34b6f523" datatype="html">
+        <source>
+      First name is required
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6ce3dadf53dda1a1ab0c3167a8ed8dced471b0dc" datatype="html">
+        <source>Last name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Registration form, last name label</note>
+      </trans-unit>
+      <trans-unit id="179e233b2bad12902cedd69bdad85e7a15e2d89c" datatype="html">
+        <source>
+      Last name is required
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c32ef07f8803a223a83ed17024b38e8d82292407" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">Registration form, password label</note>
+      </trans-unit>
+      <trans-unit id="c5ade6aed4f6dbe8e1a28318f7a739af199bb894" datatype="html">
+        <source>
+      Password is required
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0a41b3ed7706392de7ed44a75d40018d42307cd6" datatype="html">
+        <source>
+      Password should be at least 8 characters long
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f4293cbdab6cfd5e59a2d2b25a15ae190c8116c7" datatype="html">
+        <source>
+      Password should contain lower and uppercase letters.
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="95ec3c95c0295d6cb4678af6349e30c642624204" datatype="html">
+        <source>
+      Password cannot contain your name.
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="244aae9346da82b0922506c2d2581373a15641cc" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <note priority="1" from="description">Registration form, email label</note>
+      </trans-unit>
+      <trans-unit id="60d1bfa953d120f6b64199fbc2b113fde0a2fc4b" datatype="html">
+        <source>
+      Email is required
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="accdd55e979c2cbd14fe45ab0b3ebcad4c0017b6" datatype="html">
+        <source>
+      Email format is incorrect
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="99387bde50a12de9097e8cb9c92e2aa6a43f8324" datatype="html">
+        <source>
+    Submit
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

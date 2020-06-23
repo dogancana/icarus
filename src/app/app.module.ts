@@ -1,4 +1,4 @@
-import { UILibModule } from './components/components.module';
+import { UILibModule } from './ui-lib/ui-lib.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 

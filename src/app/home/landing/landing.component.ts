@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+import { WindowRefService } from 'src/app/ui-lib/window-service';
 
 @Component({
   selector: 'app-landing',
@@ -10,7 +11,14 @@ export class LandingComponent implements OnInit, OnDestroy {
   public timeToRedirect = 5;
   private redirectTimerID: number;
   private timerIntervalID: number;
-  constructor(private router: Router, private window: Window) {}
+  private window: Window;
+
+  constructor(
+    private router: Router,
+    private windowRefService: WindowRefService
+  ) {
+    this.window = this.windowRefService.nativeWindow;
+  }
 
   ngOnInit(): void {
     this.redirectTimerID = this.window.setTimeout(
