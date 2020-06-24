@@ -9,11 +9,11 @@
           <context context-type="linenumber">1</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="a558196afdc104da8c017131f9c8f54a0314d0d2" datatype="html">
+      <trans-unit id="0a10874bf4de83439c2780f2f493a56e411a1ac2" datatype="html">
         <source>
       You are not logged. You&apos;ll be redirected to login/registration flow in
       <x id="INTERPOLATION" equiv-text="{{ timeToRedirect }}"/>
-      <x id="ICU" equiv-text="{ timeToRedirect, plural, many {...} =1 {...}}"/>
+      <x id="ICU" equiv-text="{ timeToRedirect, plural, other {...} =1 {...}}"/>
     </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
@@ -21,8 +21,8 @@
         </context-group>
         <note priority="1" from="description">Not logged in text</note>
       </trans-unit>
-      <trans-unit id="9013b3624614b7ef90b12d11da88e3700c730542" datatype="html">
-        <source>{VAR_PLURAL, plural, many {seconds} =1 {second} }</source>
+      <trans-unit id="bc8d20d5ce5c2f07c799c05fbc537ce7d889cda4" datatype="html">
+        <source>{VAR_PLURAL, plural, other {seconds} =1 {second} }</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
           <context context-type="linenumber">6</context>
@@ -156,6 +156,27 @@
           <context context-type="sourcefile">src/app/registration/sign-up-form/sign-up-form.component.html</context>
           <context context-type="linenumber">88</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="43bdaed2bdaf43fac8c234c3ab7802b4cd894ac0" datatype="html">
+        <source>
+      Your registration handled with success. Please check your email for
+      further steps. Click here to go back to home page.
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-page/sign-up-page.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Registration success message</note>
+      </trans-unit>
+      <trans-unit id="532f69d10823446b73524bbacb87e9dc9beda539" datatype="html">
+        <source>
+      There was an error while processing your request. Please try again
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/registration/sign-up-page/sign-up-page.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Registration error message</note>
       </trans-unit>
     </body>
   </file>
