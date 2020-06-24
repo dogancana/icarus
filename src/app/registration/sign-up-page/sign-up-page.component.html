@@ -1,0 +1,21 @@
+<div id="form-wrapper">
+  <div *ngIf="submitting || submitted" id="layer">
+    <mat-spinner *ngIf="submitting"></mat-spinner>
+    <p
+      *ngIf="submitted"
+      i18n="Registration success message"
+      (click)="navigateHome()"
+    >
+      Your registration handled with success. Please check your email for
+      further steps. Click here to go back to home page.
+    </p>
+  </div>
+
+  <app-sign-up-form (handleSubmit)="onSubmit($event)"></app-sign-up-form>
+  <div *ngIf="submitError">
+    <br />
+    <p *ngIf="submitError" i18n="Registration error message">
+      There was an error while processing your request. Please try again
+    </p>
+  </div>
+</div>

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import {
   FormBuilder,
   Validators,
   FormControl,
   FormGroupDirective,
   NgForm,
+  FormGroup,
 } from '@angular/forms';
 import {
   lowerAndUpperCharacters,
@@ -18,6 +19,7 @@ import { ErrorStateMatcher } from '@angular/material/core';
   styleUrls: ['./sign-up-form.component.scss'],
 })
 export class SignUpFormComponent {
+  @Output() handleSubmit: EventEmitter<FormGroup['value']> = new EventEmitter();
   passwordErrorStateMatcher = new PasswordErrorStateMatcher();
   signUpForm = this.fb.group(
     {
@@ -35,10 +37,7 @@ export class SignUpFormComponent {
   );
 
   constructor(private fb: FormBuilder) {}
-
-  onSubmit() {
-    console.warn(this.signUpForm.value);
-  }
+  onSubmit = () => this.handleSubmit.emit(this.signUpForm.value);
 }
 
 class PasswordErrorStateMatcher implements ErrorStateMatcher {
